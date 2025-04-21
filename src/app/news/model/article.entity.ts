@@ -1,10 +1,10 @@
 import {Source} from './source.entity';
 
-export class ArticleEntity {
+export class Article {
   title: string;
   description: string;
   url: string;
-  urlImage: string;
+  urlToImage: string;
   publishedAt: string;
   source: Source;
 
@@ -12,7 +12,7 @@ export class ArticleEntity {
     this.title = '';
     this.description = '';
     this.url='';
-    this.urlImage = '';
+    this.urlToImage = '';
     this.publishedAt = '';
     this.source = new Source();
   }
