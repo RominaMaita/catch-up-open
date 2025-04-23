@@ -26,7 +26,7 @@ export class NewsApiService {
       `${this.baseUrl}${this.sourcesEndpoint}`,
       { params: { apiKey: this.apiKey }})
       .pipe(map(response =>
-        SourceAssembler.toEntitiesFromResponse(response)));
+        SourceAssembler.withLogoApiService(this.logoApiService).toEntitiesFromResponse(response)));
   }
 
   getArticlesBySourceId(sourceId: string): Observable<Article[]> {

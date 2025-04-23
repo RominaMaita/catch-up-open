@@ -1,22 +1,22 @@
 import {Component, Input} from '@angular/core';
 import {Article} from '../../model/article.entity';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatIcon} from '@angular/material/icon';
 import {
   MatCard,
   MatCardActions,
   MatCardContent,
   MatCardHeader,
-  MatCardImage,
+  MatCardImage, MatCardModule,
   MatCardTitleGroup
 } from '@angular/material/card';
 import {DatePipe} from '@angular/common';
 import {MatAnchor, MatIconButton} from '@angular/material/button';
 import {TranslatePipe} from '@ngx-translate/core';
-import {MatIcon} from '@angular/material/icon-module.d-BeibE7j0';
 
 @Component({
   selector: 'app-article-item',
-  imports: [MatSnackBarModule, MatCard, MatCardHeader, MatCardContent, MatCardActions, MatCardImage, MatCardTitleGroup, DatePipe, MatAnchor, TranslatePipe, MatIconButton, MatIcon],
+  imports: [MatCardModule,MatSnackBarModule, MatCard, MatCardHeader, MatCardContent, MatCardActions, MatCardImage, MatCardTitleGroup, DatePipe, MatAnchor, TranslatePipe, MatIconButton, MatIcon],
   templateUrl: './article-item.component.html',
   styleUrl: './article-item.component.css'
 })
